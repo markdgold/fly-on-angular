@@ -1,9 +1,12 @@
 var mongoose = require('mongoose');
 
 var AirplaneSchema = new mongoose.Schema({
-  manufacturer: String,
-  model: String,
-  engines: Number
+    manufacturer: String,
+    model: String,
+    engines: Number,
+    image: String
 });
 
-module.exports = mongoose.model('Airplane', AirplaneSchema);
+var Airplane = mongoose.model('Airplane', AirplaneSchema);
+
+module.exports = Airplane;

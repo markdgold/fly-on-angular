@@ -5,18 +5,25 @@ app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
         $urlRouterProvider.otherwise('/404');
 
         $stateProvider
-            .state('airplanes', {
-                url: '/',
-                templateUrl: 'app/airplanes.html'
-            })
             .state('404', {
                 url: '/404',
-                templateUrl: 'app/404.html'
+                templateUrl: 'views/404.html'
             })
             .state('about', {
                 url: '/about',
-                templateUrl: 'app/about.html'
+                templateUrl: 'views/about.html'
+            })
+            .state('planes', {
+                url: '/',
+                templateUrl: 'views/airplanes.html',
+                controller: 'AllPlanesCtrl'
+            })
+            .state('airplaneShow', {
+                url: '/plane/:id',
+                templateUrl: 'views/airplaneShow.html',
+                controller: 'PlaneShowCtrl'
             });
+
         $locationProvider.html5Mode(true);
 
     }
