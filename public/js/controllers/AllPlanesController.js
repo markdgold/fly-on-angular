@@ -3,6 +3,5 @@ angular.module('AirplaneApp').controller('AllPlanesCtrl', ['$scope', 'PlanesFact
         PlanesFactory.getPlanes().then(function(res) {
             $scope.planes = res.data;
         });
-
     }
 ]);

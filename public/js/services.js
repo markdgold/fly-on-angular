@@ -6,6 +6,9 @@ angular.module('AirplaneApp').factory('PlanesFactory', ['$http', function($http)
         },
         getPlane: function(id) {
             return $http.get('/api/airplanes/' + id);
+        },
+        addPlane: function(newPlane) {
+            return $http.post('/api/airplanes', newPlane);
         }
 
     };

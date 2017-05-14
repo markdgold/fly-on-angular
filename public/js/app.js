@@ -13,6 +13,11 @@ app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
                 url: '/about',
                 templateUrl: 'views/about.html'
             })
+            .state('addNew', {
+                url: '/addNew',
+                templateUrl: 'views/addNew.html',
+                controller: 'NewPlaneCtrl'
+            })
             .state('planes', {
                 url: '/',
                 templateUrl: 'views/airplanes.html',
